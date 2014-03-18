@@ -17,6 +17,6 @@
 
 .DS_Store
 
-public/assets/*
+/public/assets/*
 
-config/database.yml
+/config/database.yml
