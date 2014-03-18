@@ -1,7 +1,7 @@
 class ThemesController < ApplicationController
 
   def index
-    @theme = Theme.find(params[:id])
+    @themes = Theme.all
   end
 
   def show
