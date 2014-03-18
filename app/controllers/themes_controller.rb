@@ -21,6 +21,19 @@ class ThemesController < ApplicationController
     end
   end
 
+  def edit
+    @theme = Theme.find(params[:id])
+  end
+
+  def update
+    @theme = Theme.find(params[:id])
+    if @theme.update(theme_params)
+      redirect_to theme_path(@theme.id)
+    else
+      render 'edit'
+    end
+  end
+
   private
     def theme_params
       params[:theme].permit(:title, :content)
