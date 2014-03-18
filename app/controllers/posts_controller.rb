@@ -6,6 +6,12 @@ class PostsController < ApplicationController
     redirect_to theme_path(@theme.id)
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to theme_path(params[:theme_id])
+  end
+
   private
     def post_params
       params[:post].permit(:content)
