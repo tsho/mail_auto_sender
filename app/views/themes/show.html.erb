@@ -3,4 +3,5 @@
 <ul>
   <%= @theme.content %>
   <%= link_to "Edit Theme", edit_theme_path(@theme.id) %>
+  <%= link_to "Delete Theme", theme_path(@theme.id), method: :delete, data:{confirm:"Are you sure?"} %>
 </ul>

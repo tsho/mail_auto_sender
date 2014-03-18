@@ -34,6 +34,12 @@ class ThemesController < ApplicationController
     end
   end
 
+  def destroy
+    @theme = Theme.find(params[:id])
+    @theme.destroy
+    redirect_to themes_path
+  end
+
   private
     def theme_params
       params[:theme].permit(:title, :content)
