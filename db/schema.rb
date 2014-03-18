@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140318063239) do
+ActiveRecord::Schema.define(version: 20140318133339) do
+
+  create_table "posts", force: true do |t|
+    t.string   "content"
+    t.integer  "theme_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "posts", ["theme_id"], name: "index_posts_on_theme_id", using: :btree
 
   create_table "themes", force: true do |t|
     t.string   "title"

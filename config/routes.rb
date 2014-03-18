@@ -1,6 +1,8 @@
 MailAutoSender::Application.routes.draw do
 
-resources :themes
+resources :themes do
+    resources :posts, only: [:create, :destroy]
+end
 root 'themes#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
