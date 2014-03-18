@@ -4,6 +4,7 @@ resources :themes do
     resources :posts, only: [:create, :destroy]
 end
 root 'themes#index'
+post '/' => 'themes#send_henry_mail', :as => :send_henry_mail
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
