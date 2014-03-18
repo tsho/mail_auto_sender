@@ -14,8 +14,11 @@ class ThemesController < ApplicationController
 
   def create
     @theme = Theme.new(theme_params)
-    @theme.save
-    redirect_to root_path
+    if @theme.save
+      redirect_to root_path
+    else
+      render "new"
+    end
   end
 
   private

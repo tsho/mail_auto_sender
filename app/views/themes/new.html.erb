@@ -9,5 +9,9 @@
   <%= f.label:content %><br>
   <%= f.text_field:content %>
 </p>
+<% if @theme.errors.any? %>
+<%= @theme.errors.messages[:title][0]%>
+<%= @theme.errors.messages[:content][0]%>
+<% end %>
 <p><%= f.submit %></p>
 <% end %>
