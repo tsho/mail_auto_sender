@@ -45,3 +45,8 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use haml
+ gem 'haml-rails'
+ gem 'erb2haml'
+ 
