@@ -1,15 +1,17 @@
 .container
   %h3.text-primary= @theme.title
-  %ul
-    = @theme.content
-    = link_to "Edit Theme", edit_theme_path(@theme.id)
-    = link_to "Delete Theme", theme_path(@theme.id), method: :delete, data:{confirm:"Are you sure?"}
-  %ul
+  .container
+  %ul.list-group
+    %li.list-group-item#item
+      = @theme.content
+      = link_to "Edit Theme", edit_theme_path(@theme.id)
+      = link_to "Delete Theme", theme_path(@theme.id), method: :delete, data:{confirm:"Are you sure?"}
     - @theme.posts.each do |post|
-      %li
+      %li.list-group-item#item
         = post.content
         = link_to "Delete", theme_post_path(post.theme_id, post.id), method: :delete, data:{confirm:"Are you sure?"}
+    %br/
     = form_for [@theme, @theme.posts.build] do |f|
       = f.text_field :content
       = f.submit
-
+    %br/

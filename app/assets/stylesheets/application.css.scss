@@ -12,4 +12,24 @@
  *= require_tree .
  */
 
- @import "bootstrap";
+@import "bootstrap";
+
+body {
+  background-color: lighten(#000, 70%);
+}
+
+header {
+  background-color: lighten(#000, 60%);
+}
+
+#item {
+  background-color: lighten(#000, 90%);
+}
+
+footer {
+  background-color: #eee;
+}
+
+#title {
+ color: #fff;
+}
