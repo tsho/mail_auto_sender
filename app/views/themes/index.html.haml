@@ -1,0 +1,9 @@
+.container
+  %h3.text-primary Themes
+
+  %ul.list-group
+    - @themes.each do |theme|
+      %li.list-group-item= link_to theme.title, theme_path(theme.id)
+
+  %p.btn-lg= link_to "Add New", new_theme_path
+  %p.btn-lg= link_to "Send Mail", root_path, method: :post, action:'themes#send_henry_mail'

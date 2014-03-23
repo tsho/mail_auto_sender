@@ -1,0 +1,15 @@
+.container
+  %h3= @theme.title
+  = form_for @theme do |f|
+    %p
+      = f.label:title
+      %br/
+      = f.text_field:title
+    %p
+      = f.label:content
+      %br/
+      = f.text_field:content
+    - if @theme.errors.any?
+      = @theme.errors.messages[:title][0]
+      = @theme.errors.messages[:content][0]
+    %p= f.submit
