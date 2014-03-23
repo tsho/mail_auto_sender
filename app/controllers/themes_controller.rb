@@ -2,6 +2,8 @@ class ThemesController < ApplicationController
 
   def send_henry_mail
     @mail = TestMailer.send_henry_mail.deliver
+    logger.debug(@mail)
+    @mail.inspect
     redirect_to themes_path
   end
 
