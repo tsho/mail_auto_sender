@@ -23,4 +23,4 @@
 
 /config/environments/development.rb.example
 
-/config/gmail_maller.yml
+/config/gmail_info.yml
