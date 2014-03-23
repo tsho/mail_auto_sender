@@ -1,7 +1,7 @@
 class ThemesController < ApplicationController
 
   def send_henry_mail
-    TestMailer.send_henry_mail.deliver
+    @mail = TestMailer.send_henry_mail.deliver
     redirect_to themes_path
   end
 
