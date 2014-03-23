@@ -22,3 +22,5 @@
 /config/database.yml
 
 /config/environments/development.rb.example
+
+/config/gmail_info.yml
